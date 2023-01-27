@@ -6,6 +6,7 @@ RUN apt upgrade -y
 
 # Install node and tools
 RUN apt install nodejs npm wget -y
+RUN npm install lighthouse -g
 
 # Install latest stable chrome
 RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
