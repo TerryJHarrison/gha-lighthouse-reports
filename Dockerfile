@@ -9,7 +9,6 @@ RUN apt-get install wget -y
 RUN wget https://deb.nodesource.com/setup_14.x
 RUN sh ./setup_14.x
 RUN apt-get install -y nodejs
-RUN apt-get install npm -y
 RUN npm install lighthouse -g
 
 # Install latest stable chrome
