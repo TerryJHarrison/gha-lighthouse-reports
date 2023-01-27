@@ -1,13 +1,15 @@
 FROM ubuntu:latest
 
 # Ensure everything up-to-date
-RUN apt update -y
-RUN apt upgrade -y
+RUN apt-get update -y
+RUN apt-get upgrade -y
 
 # Install tools
-RUN apt install wget -y
-RUN curl -fsSL https://deb.nodesource.com/setup_14.x | bash - && apt-get install -y nodejs
-RUN apt install npm -y
+RUN apt-get install wget -y
+RUN wget https://deb.nodesource.com/setup_14.x
+RUN sh ./setup_14.x
+RUN apt-get install -y nodejs
+RUN apt-get install npm -y
 RUN npm install lighthouse -g
 
 # Install latest stable chrome
